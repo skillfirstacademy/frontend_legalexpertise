@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --radius: 0.5rem;
+
+  --color-background: hsl(0 0% 4%);
+  --color-foreground: hsl(40 30% 94%);
+
+  --color-card: hsl(0 0% 7%);
+  --color-card-foreground: hsl(40 30% 94%);
+
+  --color-popover: hsl(0 0% 7%);
+  --color-popover-foreground: hsl(40 30% 94%);
+
+  --color-primary: hsl(42 65% 52%);
+  --color-primary-foreground: hsl(0 0% 4%);
+
+  --color-secondary: hsl(0 0% 11%);
+  --color-secondary-foreground: hsl(40 30% 94%);
+
+  --color-muted: hsl(0 0% 13%);
+  --color-muted-foreground: hsl(40 10% 65%);
+
+  --color-accent: hsl(42 65% 52%);
+  --color-accent-foreground: hsl(0 0% 4%);
+
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+
+  --color-border: hsl(42 30% 20%);
+  --color-input: hsl(0 0% 14%);
+  --color-ring: hsl(42 65% 52%);
+
+  /* CUSTOM COLORS */
+  --color-gold: hsl(42 65% 52%);
+  --color-gold-light: hsl(45 80% 70%);
+  --color-gold-dark: hsl(38 60% 38%);
+  --color-cream: hsl(36 30% 93%);
+  --color-dark-surface: hsl(0 0% 8%);
+  --color-dark-elevated: hsl(0 0% 12%);
+
+  /* GRADIENTS */
+  --gradient-gold: linear-gradient(135deg, hsl(45 80% 70%), hsl(42 65% 52%) 50%, hsl(38 60% 38%));
+  --gradient-dark: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 8%));
+  --gradient-radial: radial-gradient(circle at 50% 0%, hsl(42 65% 52% / 0.15), transparent 60%);
+
+  /* SHADOWS */
+  --shadow-gold: 0 10px 40px -10px hsl(42 65% 52% / 0.4);
+  --shadow-elegant: 0 20px 60px -20px hsl(0 0% 0% / 0.8);
+
+  /* SIDEBAR */
+  --color-sidebar-background: hsl(0 0% 6%);
+  --color-sidebar-foreground: hsl(40 30% 94%);
+  --color-sidebar-primary: hsl(42 65% 52%);
+  --color-sidebar-primary-foreground: hsl(0 0% 4%);
+  --color-sidebar-accent: hsl(0 0% 12%);
+  --color-sidebar-accent-foreground: hsl(40 30% 94%);
+  --color-sidebar-border: hsl(0 0% 16%);
+  --color-sidebar-ring: hsl(42 65% 52%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Selection */
+::selection {
+  background: hsl(42 65% 52% / 0.3);
+}
+
+.gold-text {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid hsl(42 65% 52% / 0.4);
+}
+
+.container-narrow {
+  max-width: 72rem;
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Corner accent */
+.corner-accent::before,
+.corner-accent::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: hsl(42 65% 52%);
+}
+
+.corner-accent::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.corner-accent::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
