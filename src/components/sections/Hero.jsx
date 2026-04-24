@@ -46,7 +46,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] text-cream"
+            className="font-display text-5xl sm:text-6xl lg:text-4xl xl:text-5xl leading-[0.95] text-cream"
           >
             Your Legal Pathway to{" "}
             <span className="gold-text italic">Global Opportunities</span>
@@ -56,7 +56,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-6 text-lg md:text-xl text-cream/80 max-w-2xl leading-relaxed"
+            className="mt-6 text-lg md:text-lg text-cream/80 max-w-2xl leading-relaxed"
           >
             Expert immigration solutions for your global dreams — study visas,
             work permits, and permanent residency, delivered with the precision
@@ -107,8 +107,8 @@ const Hero = () => {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-[10px] tracking-[0.3em] uppercase text-cream/60">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent animate-pulse" />
+        {/* <span className="text-[10px] tracking-[0.3em] uppercase text-cream/60">Scroll</span>
+        <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent animate-pulse" /> */}
       </motion.div>
     </section>
   );
