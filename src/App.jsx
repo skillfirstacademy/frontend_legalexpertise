@@ -10,6 +10,7 @@ import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
+import Uae from "./pages/Countries/Uae";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,15 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
+        <Route path="/countries/uae" element={<Uae />} />
+              {/* 
+        <Route path="/countries/usa" element={<USAPage />} />
+        <Route path="/countries/uk" element={<UKPage />} />
+        <Route path="/countries/canada" element={<CanadaPage />} />
+        <Route path="/countries/europe" element={<EuropePage />} />
+        <Route path="/countries/australia" element={<AustraliaPage />} />
+        <Route path="/countries/singapore" element={<SingaporePage />} />
+        */}
             </Routes>
           </Layout>
         </BrowserRouter>

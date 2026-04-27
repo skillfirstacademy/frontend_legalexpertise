@@ -107,8 +107,6 @@ const Hero = () => {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        {/* <span className="text-[10px] tracking-[0.3em] uppercase text-cream/60">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent animate-pulse" /> */}
       </motion.div>
     </section>
   );

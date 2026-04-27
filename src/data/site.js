@@ -1,3 +1,12 @@
+import usa from "../assets/usa.jpg"
+import uk from "../assets/uk.jpg"
+import uae from "../assets/uae.png"
+import europe from "../assets/download.jpg"
+import australia from "../assets/australia.png"
+import canada from "../assets/canada1.jpg"
+import singapore from "../assets/singapore.png"
+import world from "../assets/world.webp"
+
 // Centralized site content — easy to update across pages
 export const siteConfig = {
   name: "Legal Expertise Group",
@@ -31,8 +40,53 @@ export const navLinks = [
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
+  { name: "Countries", path: "" },
 ];
 
+export const countries = [
+  {
+    code: "ae",
+    name: "UAE",
+    path: "/countries/uae",
+    image: uae,
+  },
+  {
+    code: "us",
+    name: "USA",
+    path: "/countries/usa",
+    image: usa,
+  },
+  {
+    code: "uk",
+    name: "UK",
+    path: "/countries/uk",
+    image: uk,
+  },
+  {
+    code: "ca",
+    name: "Canada",
+    path: "/countries/canada",
+    image: canada,
+  },
+  {
+    code: "eu",
+    name: "Europe",
+    path: "/countries/europe",
+    image: europe,
+  },
+  {
+    code: "au",
+    name: "Australia",
+    path: "/countries/australia",
+    image: australia,
+  },
+  {
+    code: "sg",
+    name: "Singapore",
+    path: "/countries/singapore",
+    image: singapore,
+  },
+];
 export const services = [
   {
     slug: "study-visa",

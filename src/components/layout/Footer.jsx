@@ -155,11 +155,8 @@ const Footer = () => {
         </div>
 
         <div className="mt-14 pt-8 border-t border-primary/15 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground tracking-wide">
+          <p className="text-xs text-muted-foreground text-center tracking-wide">
             © {year} {siteConfig.name}. All rights reserved.
-          </p>
-          <p className="text-xs text-muted-foreground tracking-wide">
-            Crafted with precision for global aspirations.
           </p>
         </div>
       </div>
