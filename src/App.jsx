@@ -11,6 +11,8 @@ import Services from "@/pages/Services";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import Uae from "./pages/Countries/Uae";
+import Canada from "./pages/Countries/Canada";
+import UKPage from "./pages/Countries/UKPage";
 
 const queryClient = new QueryClient();
 
@@ -29,11 +31,11 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
-        <Route path="/countries/uae" element={<Uae />} />
+              <Route path="/countries/uae" element={<Uae />} />
+              <Route path="/countries/canada" element={<Canada />} />
+              <Route path="/countries/uk" element={<UKPage />} />
               {/* 
         <Route path="/countries/usa" element={<USAPage />} />
-        <Route path="/countries/uk" element={<UKPage />} />
-        <Route path="/countries/canada" element={<CanadaPage />} />
         <Route path="/countries/europe" element={<EuropePage />} />
         <Route path="/countries/australia" element={<AustraliaPage />} />
         <Route path="/countries/singapore" element={<SingaporePage />} />
