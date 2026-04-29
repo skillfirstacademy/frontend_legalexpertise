@@ -13,6 +13,10 @@ import NotFound from "@/pages/NotFound";
 import Uae from "./pages/Countries/Uae";
 import Canada from "./pages/Countries/Canada";
 import UKPage from "./pages/Countries/UKPage";
+import Usa from "./pages/Countries/Usa";
+import Europe from "./pages/Countries/Europe";
+import Australia from "./pages/Countries/Australia";
+import Singapore from "./pages/Countries/Singapore";
 
 const queryClient = new QueryClient();
 
@@ -34,11 +38,11 @@ const App = () => (
               <Route path="/countries/uae" element={<Uae />} />
               <Route path="/countries/canada" element={<Canada />} />
               <Route path="/countries/uk" element={<UKPage />} />
+              <Route path="/countries/usa" element={<Usa/>} />
+              <Route path="/countries/europe" element={<Europe/>} />
+              <Route path="/countries/australia" element={<Australia/>} />
+              <Route path="/countries/singapore" element={<Singapore />} />
               {/* 
-        <Route path="/countries/usa" element={<USAPage />} />
-        <Route path="/countries/europe" element={<EuropePage />} />
-        <Route path="/countries/australia" element={<AustraliaPage />} />
-        <Route path="/countries/singapore" element={<SingaporePage />} />
         */}
             </Routes>
           </Layout>
