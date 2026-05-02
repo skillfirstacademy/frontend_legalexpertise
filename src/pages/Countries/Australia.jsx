@@ -1,7 +1,9 @@
 import React from "react";
 import AustraliaRelocation from "../../components/Countries/AustraliaRelocation";
 import CountryAboutPage from "../../components/Countries/Countryaboutpage";
-import australiaImg from "../../assets/australia.jpg"
+import australiaImg from "../../assets/australia.jpg";
+import HeroSection from "../../components/Countries/HeroSection";
+import australiaVideoSrc from "../../assets/videos/australia.mp4"
 
 const australiaData = {
   country: "Australia",
@@ -18,6 +20,11 @@ const australiaData = {
 const AustraliaPage = () => {
   return (
     <>
+      <HeroSection
+        videoSrc={australiaVideoSrc}
+        countryName="Australia"
+        description="Australia is known for its high quality of life, strong economy, world-class education system, and stunning landscapes. Explore pathways to visit, work, study, or settle in Australia with the support of Legal Expertise Group"
+      />
       <CountryAboutPage image={australiaImg} data={australiaData} />
       <AustraliaRelocation />
     </>

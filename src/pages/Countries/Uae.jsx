@@ -1,8 +1,10 @@
 import CountriesAbout from "../../components/Countries/CountriesAbout";
-import uaeImg from "../../assets/uae-handshake.jpg"; 
+import uaeImg from "../../assets/uae-handshake.jpg";
 import UAERelocation from "../../components/Countries/Uaerelocation";
-import uae from "../../assets/uae.jpg"
+import uae from "../../assets/uae.jpg";
 import CountryAboutPage from "../../components/Countries/Countryaboutpage";
+import HeroSection from "../../components/Countries/HeroSection";
+import uaeVideoSrc from "../../assets/videos/uae.mp4"
 
 const uaeData = {
   country: "United Arab Emirates",
@@ -21,22 +23,13 @@ const uaeData = {
 const UAE = () => {
   return (
     <>
-    <CountryAboutPage image={uae} data={uaeData} />
-    {/* <CountriesAbout
-      image={uaeImg}
-      imageAlt="Legal Expertise Group – UAE office"
-      eyebrow="United Arab Emirates"
-      title="Welcome to"
-      titleAccent="Legal Expertise Group"
-      body="A distinguished leader in immigration and HR consultancy, Legal Expertise Group brings over a decade of proven excellence in India, with an expanding international footprint across the United Kingdom and Dubai."
-      services={[
-        "Global Immigration & Visa Advisory",
-        "Talent Acquisition & Workforce Solutions",
-        "Long-Term Residency & Settlement Services",
-      ]}
-      tagline="We are committed to delivering precision, compliance, and seamless execution at every stage of your journey."
-    /> */}
-    <UAERelocation/>
+      <HeroSection
+        videoSrc={uaeVideoSrc}
+        countryName="UAE"
+        description="The UAE is a progressive Middle Eastern nation recognized for its modern lifestyle, innovation, and global career opportunities. Discover immigration, residency, and visa solutions with Legal Expertise Group"
+      />
+      <CountryAboutPage image={uae} data={uaeData} />
+      <UAERelocation />
     </>
   );
 };

@@ -17,7 +17,7 @@ const PageHero = ({ eyebrow, title, description, image, breadcrumb }) => (
     {/* Content wrapper */}
     <div className="relative z-10 w-full" style={{ maxWidth: "72rem", margin: "0 auto", paddingLeft: "1rem", paddingRight: "1rem" }}>
       {/* Vertical spacing responsive */}
-      <div className="py-16 sm:py-20 md:py-24 lg:py-32">
+      <div className="sm:py-10 md:py-20 lg:py-28">
         {/* Breadcrumb Navigation */}
         {breadcrumb && (
           <motion.nav

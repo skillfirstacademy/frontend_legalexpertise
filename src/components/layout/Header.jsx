@@ -5,7 +5,7 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { navLinks, siteConfig, countries } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import logo from "../../assets/logo.jpg"
-import world from "../../assets/world.webp"
+import world from "../../assets/world.jpg"
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -56,7 +56,7 @@ const mobileCountriesRef  = useRef(null)
       <div className="container-narrow flex items-center justify-between h-20">
         {/* Logo */}
         <Link to="/" className="group flex items-center gap-3" aria-label={siteConfig.name}>
-          <div className="relative w-11 h-11 md:h-15 md:w-15 lg:h-16 lg:w-22 flex items-center justify-center">
+          <div className="relative w-15 h-11 md:h-15 md:w-15 lg:h-16 lg:w-22 flex items-center justify-center">
             <div className="absolute inset-0 rounded-md bg-gradient-gold opacity-90 group-hover:opacity-100 transition-opacity" />
             <img src={logo} alt="" />
           </div>
@@ -114,14 +114,14 @@ const mobileCountriesRef  = useRef(null)
                         >
                           {/* Map Background Container */}
                           <div 
-                            className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+                            className="relative w-full h-[50vh] overflow-hidden bg-cover bg-center bg-no-repeat"
                             style={{
                               backgroundImage: `url(${world})`,
                               backgroundBlendMode: 'overlay'
                             }}
                           >
                             {/* Dark overlay for readability */}
-                            <div className="absolute inset-0 bg-black/20" />
+                            <div className="absolute inset-0 backdrop-blur-[1px]" />
 
                             {/* Animated Map Background Pattern */}
                             <div className="absolute inset-0">
@@ -292,10 +292,10 @@ const mobileCountriesRef  = useRef(null)
         {open && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
+            animate={{ height: "90vh", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden overflow-hidden bg-background/95 backdrop-blur-xl border-t border-primary/20"
+            className="lg:hidden overflow-auto bg-background/95 backdrop-blur-xl border-t border-primary/20"
             data-mobile-menu
           >
             <nav className="container-narrow py-6 flex flex-col gap-1" aria-label="Mobile">

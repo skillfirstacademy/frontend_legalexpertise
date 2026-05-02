@@ -1,8 +1,9 @@
 import React from "react";
 import USARelocation from "../../components/Countries/UsaRelocation";
-import usaImg from "../../assets/usa1.jpg"
+import usaImg from "../../assets/usa1.jpg";
 import CountryAboutPage from "../../components/Countries/Countryaboutpage";
-
+import HeroSection from "../../components/Countries/HeroSection";
+import usaVideoSrc from "../../assets/videos/usa.mp4"
 const usaData = {
   country: "United States of America",
   heroTagline: "Build Your Future in the USA from Anywhere in the World",
@@ -18,6 +19,11 @@ const usaData = {
 const Usa = () => {
   return (
     <>
+      <HeroSection
+        videoSrc={usaVideoSrc}
+        countryName="USA"
+        description="The United States is one of the world’s most influential countries, known for innovation, education, technology, entertainment, and diverse landscapes. Explore work, study, and immigration opportunities with Legal Expertise Group."
+      />
       <CountryAboutPage image={usaImg} data={usaData} />
       <USARelocation />
     </>

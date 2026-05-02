@@ -1,8 +1,9 @@
-import React from 'react'
-import CanadaRelocation from '../../components/Countries/CanadaRelocation'
-import canadaImg from "../../assets/canada3.jpg"
-import CountryAboutPage from '../../components/Countries/Countryaboutpage';
-
+import React from "react";
+import CanadaRelocation from "../../components/Countries/CanadaRelocation";
+import canadaImg from "../../assets/canada3.jpg";
+import CountryAboutPage from "../../components/Countries/Countryaboutpage";
+import HeroSection from "../../components/Countries/HeroSection";
+import canadaVideoSrc from "../../assets/videos/canada.mp4"
 const canadaData = {
   country: "Canada",
   heroTagline: "Move to Canada Made Simple",
@@ -18,10 +19,15 @@ const canadaData = {
 const Canada = () => {
   return (
     <>
-     <CountryAboutPage image={canadaImg} data={canadaData} />;
-    <CanadaRelocation/>
+      <HeroSection
+        videoSrc={canadaVideoSrc}
+        countryName="Canada"
+        description="Canada is known for its breathtaking landscapes, multicultural society, strong economy, and high standard of living. From Toronto to Vancouver, explore opportunities for education, work, and immigration"
+      />
+      <CountryAboutPage image={canadaImg} data={canadaData} />;
+      <CanadaRelocation />
     </>
-  )
-}
+  );
+};
 
-export default Canada
+export default Canada;

@@ -1,8 +1,9 @@
-import React from 'react'
-import EuropeRelocation from '../../components/Countries/Europerelocation'
-import europeImg from "../../assets/europe.jpg"
-import CountryAboutPage from '../../components/Countries/Countryaboutpage';
- 
+import React from "react";
+import EuropeRelocation from "../../components/Countries/Europerelocation";
+import europeImg from "../../assets/europe.jpg";
+import CountryAboutPage from "../../components/Countries/Countryaboutpage";
+import HeroSection from "../../components/Countries/HeroSection";
+import europeVideoSrc from "../../assets/videos/europe.mp4"
 const europeData = {
   country: "Europe",
   heroTagline: "Work and Settle in Europe with Receptive Solutions",
@@ -18,10 +19,15 @@ const europeData = {
 const Europe = () => {
   return (
     <>
-       <CountryAboutPage image={europeImg} data={europeData} />
-        <EuropeRelocation/>
+      <HeroSection
+        videoSrc={europeVideoSrc}
+        countryName="Europe"
+        description="Europe is known for its rich history, advanced economies, cultural diversity, and strong job markets. Explore visa and employment pathways across multiple European countries with Legal Expertise Group"
+      />
+      <CountryAboutPage image={europeImg} data={europeData} />
+      <EuropeRelocation />
     </>
-  )
-}
+  );
+};
 
-export default Europe
+export default Europe;

@@ -1,11 +1,21 @@
-import React from 'react'
-import SingaporeRelocation from '../../components/Countries/SingaporeRelocation'
-import CountryAboutPage from '../../components/Countries/Countryaboutpage'
+import React from "react";
+import SingaporeRelocation from "../../components/Countries/SingaporeRelocation";
+import CountryAboutPage from "../../components/Countries/Countryaboutpage";
 import {
-  ArrowRight, Check, ChevronDown, ChevronUp,
-  Shield, TrendingUp, Globe, Briefcase, Star, Users,
+  ArrowRight,
+  Check,
+  ChevronDown,
+  ChevronUp,
+  Shield,
+  TrendingUp,
+  Globe,
+  Briefcase,
+  Star,
+  Users,
 } from "lucide-react";
-import singapore from "../../assets/singapore.jpg"
+import singapore from "../../assets/singapore.jpg";
+import HeroSection from "../../components/Countries/HeroSection";
+import singaporeVideoSrc from "../../assets/videos/singapore.mp4"
 
 const defaultData = {
   country: "Singapore",
@@ -43,7 +53,12 @@ const defaultData = {
       subtitle: "For Skilled Professionals",
       description:
         "The Employment Pass is ideal for high-skilled foreign professionals seeking to advance their careers at the highest levels of Singapore's economy.",
-      eligibleFor: ["Professionals", "Managers", "Executives", "Business owners"],
+      eligibleFor: [
+        "Professionals",
+        "Managers",
+        "Executives",
+        "Business owners",
+      ],
       benefits: [
         "Work in top sectors like finance, IT, healthcare, and business",
         "Higher salary packages and career growth opportunities",
@@ -53,26 +68,49 @@ const defaultData = {
       ],
     },
   ],
- 
+
   highlights: [
-    { icon: <Shield className="w-5 h-5 stroke-primary" strokeWidth={1.5} />, label: "Safe & Stable" },
-    { icon: <TrendingUp className="w-5 h-5 stroke-primary" strokeWidth={1.5} />, label: "Strong Economy" },
-    { icon: <Globe className="w-5 h-5 stroke-primary" strokeWidth={1.5} />, label: "Global Hub" },
-    { icon: <Briefcase className="w-5 h-5 stroke-primary" strokeWidth={1.5} />, label: "Top Employers" },
-    { icon: <Star className="w-5 h-5 stroke-primary" strokeWidth={1.5} />, label: "Quality of Life" },
-    { icon: <Users className="w-5 h-5 stroke-primary" strokeWidth={1.5} />, label: "Multicultural" },
+    {
+      icon: <Shield className="w-5 h-5 stroke-primary" strokeWidth={1.5} />,
+      label: "Safe & Stable",
+    },
+    {
+      icon: <TrendingUp className="w-5 h-5 stroke-primary" strokeWidth={1.5} />,
+      label: "Strong Economy",
+    },
+    {
+      icon: <Globe className="w-5 h-5 stroke-primary" strokeWidth={1.5} />,
+      label: "Global Hub",
+    },
+    {
+      icon: <Briefcase className="w-5 h-5 stroke-primary" strokeWidth={1.5} />,
+      label: "Top Employers",
+    },
+    {
+      icon: <Star className="w-5 h-5 stroke-primary" strokeWidth={1.5} />,
+      label: "Quality of Life",
+    },
+    {
+      icon: <Users className="w-5 h-5 stroke-primary" strokeWidth={1.5} />,
+      label: "Multicultural",
+    },
   ],
 };
 
 const Singapore = () => {
   return (
-    <div>
-        <>
-        <CountryAboutPage data={defaultData} image={singapore}/>
-        <SingaporeRelocation/>
-        </>
-    </div>
-  )
-}
+    // <div>
+    <>
+      <HeroSection
+        videoSrc={singaporeVideoSrc}
+        countryName="Singapore"
+        description="Singapore is a global hub for finance, technology, and innovation. Known for its safety, modern skyline, and strong economy, it offers excellent career opportunities for skilled professionals. Explore work and immigration pathways with Legal Expertise Group"
+      />
+      <CountryAboutPage data={defaultData} image={singapore} />
+      <SingaporeRelocation />
+    </>
+    // </div>
+  );
+};
 
-export default Singapore
+export default Singapore;

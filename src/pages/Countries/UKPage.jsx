@@ -1,7 +1,9 @@
 import React from "react";
 import UKRelocation from "../../components/Countries/UkRelocation";
 import CountryAboutPage from "../../components/Countries/Countryaboutpage";
-import ukImg from "../../assets/uk1.jpg"
+import ukImg from "../../assets/uk1.jpg";
+import HeroSection from "../../components/Countries/HeroSection";
+import ukVideoSrc from "../../assets/videos/uk.mp4"
 
 const ukData = {
   country: "United Kingdom",
@@ -18,6 +20,11 @@ const ukData = {
 const UKPage = () => {
   return (
     <>
+      <HeroSection
+        videoSrc={ukVideoSrc}
+        countryName="UK"
+        description="The UK is renowned for its rich history, prestigious education system, diverse culture, and famous landmarks like Buckingham Palace and the Tower of London. Discover immigration and visa pathways with Legal Expertise Group."
+      />
       <CountryAboutPage image={ukImg} data={ukData} />;
       <UKRelocation />
     </>

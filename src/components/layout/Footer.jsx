@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { navLinks, services, siteConfig } from "@/data/site";
 import { ArrowRight, MapPin, Phone, Mail, Clock } from "lucide-react";
-
+import logo from "../../assets/logo.jpg"
 // TikTok icon (lucide doesn't ship a tiktok glyph)
 const TikTok = (props) => (
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
       <div className="absolute inset-0 bg-gradient-radial opacity-40 pointer-events-none" />
 
-      <div className="container-narrow relative py-16">
+      <div className="container-narrow relative py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <motion.div
@@ -36,19 +36,13 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Link to="/" className="flex items-center gap-3 mb-5">
-              <div className="w-11 h-11 rounded-md bg-gradient-gold flex items-center justify-center font-display font-bold text-xl text-background">
-                L
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="font-display text-lg">
-                  Legal <span className="gold-text">Expertise</span>
-                </span>
-                <span className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
-                  Immigration
-                </span>
-              </div>
-            </Link>
+            <Link to="/" className="group flex items-center gap-3" aria-label={siteConfig.name}>
+          <div className="relative w-15 h-11 md:h-15 md:w-15 lg:h-16 lg:w-22 flex items-center justify-center mb-2">
+            <div className="absolute inset-0 rounded-md bg-gradient-gold opacity-90 group-hover:opacity-100 transition-opacity" />
+            <img src={logo} alt="" />
+          </div>
+        </Link>
+
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
               Expert legal guidance for your global dreams. Trusted advisory
               for study visas, work permits, and permanent residency.
